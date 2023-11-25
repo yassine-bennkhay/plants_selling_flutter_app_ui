@@ -21,7 +21,7 @@ class _PlantCategoriesState extends State<PlantCategories> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 10),
+      margin: const EdgeInsets.symmetric(horizontal: 25),
       height: 40,
       child: ListView.separated(
           scrollDirection: Axis.horizontal,

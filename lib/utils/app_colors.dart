@@ -5,5 +5,5 @@ class AppColors {
   static const backgroundColor = Color(0xffe6faf4);
   static const textColor = Color(0xff161B1D);
   static const containerColor = Color(0xff1D1B27);
-  static const greyElementColor = Color(0xffd7d7d9);
+  static const greyElementColor = Color(0xff979798);
 }

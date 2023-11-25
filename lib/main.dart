@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:planting_app/screens/home/home.dart';
+import 'package:planting_app/screens/root/root.dart';
 
 import 'utils/app_colors.dart';
 
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           fontFamily: "Roboto",
           primaryColor: AppColors.primaryColor,
           scaffoldBackgroundColor: AppColors.backgroundColor),
-      home: const HomeScreen(),
+      home: const Root(),
     );
   }
 }

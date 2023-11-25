@@ -10,6 +10,7 @@ class Plant {
   final double weight;
   final String type;
   final bool isPopular;
+  final bool isFavorite;
 
   Plant({
     required this.title,
@@ -23,6 +24,7 @@ class Plant {
     required this.weight,
     required this.type,
     required this.isPopular,
+    required this.isFavorite,
   });
   static List<Plant> getAllPlants() {
     return [
@@ -38,19 +40,22 @@ class Plant {
         weight: 1.5,
         type: 'Tropical',
         isPopular: true,
+        isFavorite: false,
       ),
       Plant(
-          title: 'Ficus',
-          imageUrl: 'assets/images/ficus.png',
-          category: 'Houseplant',
-          price: 24.99,
-          rating: 4.2,
-          description: 'An indoor plant with glossy leaves.',
-          height: 2.5,
-          diameter: 2.0,
-          weight: 0.8,
-          type: 'Indoor',
-          isPopular: false),
+        title: 'Ficus',
+        imageUrl: 'assets/images/ficus.png',
+        category: 'Houseplant',
+        price: 24.99,
+        rating: 4.2,
+        description: 'An indoor plant with glossy leaves.',
+        height: 2.5,
+        diameter: 2.0,
+        weight: 0.8,
+        type: 'Indoor',
+        isPopular: false,
+        isFavorite: true,
+      ),
       Plant(
           title: 'Monstera',
           imageUrl: 'assets/images/monstera.png',
@@ -62,7 +67,8 @@ class Plant {
           diameter: 2.5,
           weight: 1.0,
           type: 'Indoor',
-          isPopular: true),
+          isPopular: true,
+          isFavorite: true),
       Plant(
         title: 'Nephrolepis',
         imageUrl: 'assets/images/nephrolepis.png',
@@ -75,6 +81,7 @@ class Plant {
         weight: 0.5,
         type: 'Outdoor',
         isPopular: true,
+        isFavorite: false,
       ),
       Plant(
         title: 'Ropalostilis',
@@ -88,6 +95,7 @@ class Plant {
         weight: 2.0,
         type: 'Outdoor',
         isPopular: false,
+        isFavorite: true,
       ),
       Plant(
         title: 'Sansevier',
@@ -101,6 +109,7 @@ class Plant {
         weight: 0.2,
         type: 'Indoor',
         isPopular: true,
+        isFavorite: true,
       ),
       Plant(
           title: 'Yucca',
@@ -113,7 +122,8 @@ class Plant {
           diameter: 2.0,
           weight: 1.2,
           type: 'Outdoor',
-          isPopular: false),
+          isPopular: false,
+          isFavorite: false),
       Plant(
           title: 'Zamioculcas',
           imageUrl: 'assets/images/zamioculcas.png',
@@ -125,7 +135,8 @@ class Plant {
           diameter: 1.5,
           weight: 0.7,
           type: 'Indoor',
-          isPopular: true),
+          isPopular: true,
+          isFavorite: true),
     ];
   }
 }

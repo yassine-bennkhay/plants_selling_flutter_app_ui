@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:planting_app/utils/app_colors.dart';
+import 'package:planting_app/utils/styles.dart';
 
 import '../../../models/plant.dart';
 import '../../../utils/app_images.dart';
@@ -30,22 +30,31 @@ class PlantItem extends StatelessWidget {
                 child: Image.asset(
                   plant.imageUrl,
                 ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(12),
+                    child: Icon(
+                      plant.isFavorite ? Icons.favorite : Icons.favorite_border,
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
               )
             ],
           ),
           const SizedBox(
             height: 10,
           ),
-          Text(
-            plant.category,
-            style: const TextStyle(color: AppColors.greyElementColor),
-          ),
+          Text(plant.category, style: greyStyle),
           const SizedBox(
             height: 5,
           ),
           Text(
             plant.title,
-            style: const TextStyle(fontWeight: FontWeight.bold),
+            style: titleStyle,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -53,15 +62,14 @@ class PlantItem extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
+                  Text(
                     "Price",
-                    style: TextStyle(color: AppColors.greyElementColor),
+                    style: greyStyle,
                   ),
                   Text(
                     "\$${plant.price.toString()}",
-                    style: const TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 18),
-                  )
+                    style: priceStyle,
+                  ),
                 ],
               ),
               ElevatedButton(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:planting_app/screens/home/home.dart';
 import 'package:planting_app/screens/root/widgets/nav_bar_items.dart';
+import 'package:planting_app/screens/store/store.dart';
 import 'package:planting_app/utils/app_colors.dart';
 
 class Root extends StatefulWidget {
@@ -27,9 +28,7 @@ class _RootState extends State<Root> {
     const Center(
       child: Text("Scan"),
     ),
-    const Center(
-      child: Text("Cart"),
-    ),
+    const StoreScreen(),
     const Center(
       child: Text("Profile"),
     ),

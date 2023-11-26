@@ -36,6 +36,7 @@ class StorePlantsList extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.only(left: 25, right: 25, bottom: 10),
       child: ListView.separated(
+          physics: const BouncingScrollPhysics(),
           itemBuilder: (context, index) => Container(
                 height: 140,
                 padding: const EdgeInsets.all(10),

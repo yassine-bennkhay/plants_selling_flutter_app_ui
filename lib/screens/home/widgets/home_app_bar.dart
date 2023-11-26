@@ -26,8 +26,12 @@ class HomeAppBar extends StatelessWidget {
                   shape: BoxShape.circle,
                   color: AppColors.greyElementColor,
                 ),
-                child: Image.asset(
-                  AppImages.userAvatar,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(40),
+                  child: Image.asset(
+                    AppImages.userAvatar,
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
               Positioned(

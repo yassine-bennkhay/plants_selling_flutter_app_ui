@@ -27,8 +27,11 @@ class PlantItem extends StatelessWidget {
                 child: Image.asset(AppImages.background),
               ),
               Center(
-                child: Image.asset(
-                  plant.imageUrl,
+                child: Hero(
+                  tag: plant.imageUrl,
+                  child: Image.asset(
+                    plant.imageUrl,
+                  ),
                 ),
               ),
               Row(
